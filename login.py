@@ -11,8 +11,9 @@ janela.iconbitmap("ico.ico")
 janela.resizable(False, False)
 
 
-img = PhotoImage(file='geometric.png')
-label_img = customtkinter.CTkLabel(master=janela)
+img = PhotoImage(file='fog.png')
+label_img = customtkinter.CTkLabel(master=janela, image=img)
+label_img.place(x=5, y=65)
 
 
 janela.mainloop()
