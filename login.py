@@ -34,7 +34,7 @@ label1 = customtkinter.CTkLabel(master=frame, text="* O campo nome de usuário �
 text_color="green", font=("Roboto", 8)).place(x=25, y=135)
 
 entry2 = customtkinter.CTkEntry(master=frame, placeholder_text="Senha de Usuário", width=300, 
-font=("Roboto", 14)).place(x=25, y=175)
+font=("Roboto", 14),show="*").place(x=25, y=175)
 label2 = customtkinter.CTkLabel(master=frame, text="*O campo Senha é de caráter obrigatório.", 
 text_color="green", font=("Roboto", 8)).place(x=25, y=205)
 
