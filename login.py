@@ -20,13 +20,13 @@ frame = customtkinter.CTkFrame(master=janela, width=350, height=396)
 frame.pack(side=RIGHT)
 
 # frame widgets
-label = customtkinter.CTkLabel(master=frame, text="Sistema de Login", text_font=("Roboto", 20))
+label = customtkinter.CTkLabel(master=frame, text="Sistema de Login", font=("Roboto", 20))
 label.place(x=25, y=5)
 
 entry1 = customtkinter.CTkEntry(master=frame, placeholder_text="Nome de Usuário", width=300, 
-text_font=("Roboto", 14)).place(x=25, y=105)
-label1 = customtkinter.CTkLabel(master=frame, text="* O campo nome de usuário é de caracter obrigatório.", 
-text_color="green", text_font=("Roboto", 8)).place(x=25, y=135)
+font=("Roboto", 14)).place(x=25, y=105)
+label1 = customtkinter.CTkLabel(master=frame, text="* O campo nome de usuário é de caráter obrigatório.", 
+text_color="green", font=("Roboto", 8)).place(x=25, y=135)
 
 
 janela.mainloop()
