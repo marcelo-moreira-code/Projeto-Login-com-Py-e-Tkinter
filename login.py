@@ -1,7 +1,7 @@
 import customtkinter
 from tkinter import *
 
-customtkinter.set_appearance_mode("dark")
+customtkinter.set_appearance_mode("light")
 customtkinter.set_default_color_theme("dark-blue")
 
 janela = customtkinter.CTk()
@@ -14,6 +14,11 @@ janela.resizable(False, False)
 img = PhotoImage(file="fog3.png")
 label_img = customtkinter.CTkLabel(master=janela, image=img)
 label_img.place(x=5, y=65)
+
+label_title = customtkinter.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
+font=("Roboto", 18), text_color="#00B0F0").place(x=10, y=10)
+# Substitui text_font por font , pois , estava crashando !
+
 
 # frame
 frame = customtkinter.CTkFrame(master=janela, width=350, height=396)
@@ -37,4 +42,6 @@ text_color="green", font=("Roboto", 8)).place(x=25, y=205)
 checkbox = customtkinter.CTkCheckBox(master=frame, text="Manter-me conectado sempre.").place(x=25, y=235)
 
 button = customtkinter.CTkButton(master=frame, text="Login", width=300).place(x=25, y=285)
+
+
 janela.mainloop()
