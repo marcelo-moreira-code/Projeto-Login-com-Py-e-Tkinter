@@ -34,7 +34,7 @@ class Application():
         login_frame = ctk.CTkFrame(master=janela, width=350, height=396)
         login_frame.pack(side=RIGHT)
 
-        # frame widgets
+        #widgets dentro da frame de tela de login
         label = ctk.CTkLabel(master=login_frame, text="Sistema de Login", font=("Roboto", 20))
         label.place(x=25, y=5)
 
