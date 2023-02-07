@@ -5,9 +5,11 @@ janela = ctk.CTk()
 
 class Application():
     def __init__(self):
+        self.janela= janela
         self.tema()
         self.tela()
         self.tela_login()
+        janela.mainloop()
 
     
     def tema(self):
@@ -24,10 +26,10 @@ class Application():
         # Trabalhando com a imagem da tela
         img = PhotoImage(file="geo2.png")
         label_img = ctk.CTkLabel(master=janela, image=img)
-        label_img.place(x=5, y=65)
+        label_img.place(x=10, y=75)
 
-        label_title = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
-        font=("Roboto", 18), text_color="#00B0F0").place(x=10, y=10)
+        title_label = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
+        font=("Roboto", 20), text_color="#00B0F0").place(x=15, y=10)
         # Substitui text_font por font , pois , estava crashando !
 
         # frame
@@ -54,4 +56,10 @@ class Application():
         login_button = ctk.CTkButton(master=login_frame, text="Login", width=300).place(x=25, y=285)
 
 
-janela.mainloop()
+        register_span = ctk.CTkLabel(master=login_frame, text="Não possue uma conta?").place(x=25, y=325)
+        register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
+        fg_color="green", hover_color="#2D9334").place(x=175, y=325)
+
+
+
+Application()
