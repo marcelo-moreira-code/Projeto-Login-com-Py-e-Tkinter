@@ -10,7 +10,7 @@ class Application():
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("dark-blue")
 
-    janela = ctk.CTk()
+    
     janela.geometry("700x400")
     janela.title("Sistema de Login")
     janela.iconbitmap("fogue2.ico")
