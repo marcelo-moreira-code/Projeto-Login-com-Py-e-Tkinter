@@ -55,8 +55,14 @@ class Application():
 
 
         register_span = ctk.CTkLabel(master=login_frame, text="Não possue uma conta?").place(x=25, y=325)
+
+
+        def tela_register():
+            # Remover o frame de login
+            login_frame.pack_forget()
+            pass
         register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
-        fg_color="green", hover_color="#2D9334").place(x=175, y=325)
+        fg_color="green", hover_color="#2D9334", command=tela_register).place(x=175, y=325)
 
 
 
