@@ -25,8 +25,7 @@ class Application():
     def tela_login(self):
         # Trabalhando com a imagem da tela
         img = PhotoImage(file="geo2.png")
-        label_img = ctk.CTkLabel(master=janela, image=img)
-        label_img.place(x=10, y=75)
+        label_img = ctk.CTkLabel(master=janela, image=img).place(x=10, y=75)
 
         title_label = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
         font=("Roboto", 20), text_color="#00B0F0").place(x=15, y=10)
@@ -37,8 +36,7 @@ class Application():
         login_frame.pack(side=RIGHT)
 
         #widgets dentro da frame de tela de login
-        label = ctk.CTkLabel(master=login_frame, text="Sistema de Login", font=("Roboto", 20))
-        label.place(x=25, y=5)
+        label = ctk.CTkLabel(master=login_frame, text="Sistema de Login", font=("Roboto", 20)).place(x=25, y=5)
 
         username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
         font=("Roboto", 14)).place(x=25, y=105)
