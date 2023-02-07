@@ -5,10 +5,12 @@ janela = ctk.CTk()
 
 class Application():
     def __init__(self):
+        self.tema()
+        
     
-
-    ctk.set_appearance_mode("dark")
-    ctk.set_default_color_theme("dark-blue")
+    def tema(self):
+        ctk.set_appearance_mode("dark")
+        ctk.set_default_color_theme("dark-blue")
 
     
     janela.geometry("700x400")
