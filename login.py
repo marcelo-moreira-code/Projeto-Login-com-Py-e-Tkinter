@@ -26,7 +26,7 @@ class Application():
     def tela_login(self):
         # Trabalhando com a imagem da tela
         img = PhotoImage(file="geo2.png")
-        label_img = ctk.CTkLabel(master=janela, image=img).place(x=10, y=75)
+        label_img = ctk.CTkLabel(master=janela, image=img, text=None).place(x=10, y=75)
 
         title_label = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
         font=("Roboto", 20), text_color="#00B0F0").place(x=15, y=10)
