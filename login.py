@@ -65,19 +65,25 @@ class Application():
             rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
             rg_frame.pack(side=RIGHT)
             
+            label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
+
+
             username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Nome de Usuário", width=300, 
             font=("Roboto", 14)).place(x=25, y=105)
 
-            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, 
+            email_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, 
             font=("Roboto", 14)).place(x=25, y=145)
 
-            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, 
+            password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, 
             font=("Roboto", 14), show="*").place(x=25, y=185)
 
-            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, 
+            confirm_password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, 
             font=("Roboto", 14), show="*").place(x=25, y=225)
+            
+            checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
 
-            label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
+            back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR", width=145, fg_color="green", hover_color="#014B05").place(x=25, y=300)
+            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="014B05").place(x=180, y=300)
 
             pass
         register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
