@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from tkinter import *
+from tkinter import messagebox
 
 janela = ctk.CTk()
 
@@ -51,7 +52,10 @@ class Application():
         #Caixa manter-me conectado
         checkbox = ctk.CTkCheckBox(master=login_frame, text="Manter-me conectado sempre.").place(x=25, y=235)
 
-        login_button = ctk.CTkButton(master=login_frame, text="Login", width=300).place(x=25, y=285)
+        def login():
+            msg = messagebox.showinfo(title="Estado de Login.", message="Parabêns! Login feito com sucesso.")
+            pass
+        login_button = ctk.CTkButton(master=login_frame, text="Login", width=300, command=login).place(x=25, y=285)
 
 
         register_span = ctk.CTkLabel(master=login_frame, text="Não possue uma conta?").place(x=25, y=325)
@@ -84,12 +88,27 @@ class Application():
             
             checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
 
-            
-            back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR", width=145, fg_color="green", hover_color="#202020").place(x=25, y=315)
-            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="014B05").place(x=180, y=315)
+            # Botões Voltar / Salvar usuário
 
-            pass
-        
+            def back():
+                # Removendo o frame de Cadastro
+                rg_frame.pack_forget()
+
+                # Devolvendo o frame de Login
+                login_frame.pack(side=RIGHT)
+
+                
+            back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR", width=145, fg_color="green", hover_color="#202020", command=back).place(x=25, y=315)
+
+            def save_user():
+                msg = messagebox.showinfo(title="Estado do Cadastro", message="Parabêns! Usuário Cadastrado com Sucesso.")
+                pass
+
+         
+            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="014B05", command=save_user).place(x=180, y=315)
+
+          
+
         register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
         fg_color="green", hover_color="#2D9334", command=tela_register).place(x=175, y=325)
 
