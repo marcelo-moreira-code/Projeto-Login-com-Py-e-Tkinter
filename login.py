@@ -60,6 +60,25 @@ class Application():
         def tela_register():
             # Remover o frame de login
             login_frame.pack_forget()
+
+            # Criando a tela de cadastro de usuários
+            rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
+            rg_frame.pack(side=RIGHT)
+            
+            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            font=("Roboto", 14)).place(x=25, y=105)
+
+            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            font=("Roboto", 14)).place(x=25, y=105)
+
+            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            font=("Roboto", 14)).place(x=25, y=105)
+
+            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            font=("Roboto", 14)).place(x=25, y=105)
+
+            label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
+
             pass
         register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
         fg_color="green", hover_color="#2D9334", command=tela_register).place(x=175, y=325)
