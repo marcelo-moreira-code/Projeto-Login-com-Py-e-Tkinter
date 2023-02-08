@@ -65,16 +65,16 @@ class Application():
             rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
             rg_frame.pack(side=RIGHT)
             
-            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Nome de Usuário", width=300, 
             font=("Roboto", 14)).place(x=25, y=105)
 
-            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, 
             font=("Roboto", 14)).place(x=25, y=105)
 
-            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, 
             font=("Roboto", 14)).place(x=25, y=105)
 
-            username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, 
             font=("Roboto", 14)).place(x=25, y=105)
 
             label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
