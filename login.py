@@ -69,13 +69,13 @@ class Application():
             font=("Roboto", 14)).place(x=25, y=105)
 
             username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, 
-            font=("Roboto", 14)).place(x=25, y=105)
+            font=("Roboto", 14)).place(x=25, y=145)
 
             username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, 
-            font=("Roboto", 14)).place(x=25, y=105)
+            font=("Roboto", 14), show="*").place(x=25, y=185)
 
             username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, 
-            font=("Roboto", 14)).place(x=25, y=105)
+            font=("Roboto", 14), show="*").place(x=25, y=225)
 
             label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
 
