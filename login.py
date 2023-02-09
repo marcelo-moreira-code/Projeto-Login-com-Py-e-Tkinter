@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from tkinter import *
+import database
 from tkinter import messagebox
 
 janela = ctk.CTk()
