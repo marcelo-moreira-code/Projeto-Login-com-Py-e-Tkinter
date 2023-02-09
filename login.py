@@ -69,6 +69,25 @@ class Application():
             # Criando a tela de cadastro de usuários
             rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
             rg_frame.pack(side=RIGHT)
+
+            ### Registrando ou tt os Dados do usuário no BD
+
+            def registrar_db():
+                username = username_entry.get()
+                email = email_entry.get()
+                password = password_entry.get()
+                confirmpassword = confirm_password_entry.get()
+
+                database.cursor.execute("""
+                INSERT INTO users 
+                (username,email,password,confirmpassword)
+                VALUES
+                (?,?,?,?)
+                """, (username, email, password, confirmpassword))
+                database.conexao.commit()
+                
+                msg = messagebox.showinfo(title="Estado do Registro", message="Dados Cadastrados com Sucesso no Banco de!")
+                pass
             
             label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
 
