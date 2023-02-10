@@ -81,6 +81,8 @@ class Application():
 
             checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
 
+
+
             # Botões Voltar - back / Salvar usuário - save_user
 
             def back():
@@ -94,8 +96,22 @@ class Application():
             back_button = ctk.CTkButton(master=rg_frame, text="VOLTAR", width=145, fg_color="green", hover_color="#202020", command=back).place(x=25, y=315)
 
             def save_user():
+                Name = username_entry.get()
+                Email = email_entry.get()
+                Password = password_entry.get()
+                Confirmpassword = confirm_password_entry.get()
+
+                database.cursor.execute("""
+                INSERT INTO users
+                (username,email,password,confirmpassword)
+                VALUES 
+                (?,?,?,?)
+                """,(Name,Email,Password,Confirmpassword))
+
+                database.conexao.commit()
+
                 msg = messagebox.showinfo(title="Estado do Cadastro", message="Parabêns! Usuário Cadastrado com Sucesso.")
-                pass
+                
 
          
             save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="014B05", command=save_user).place(x=180, y=315)
