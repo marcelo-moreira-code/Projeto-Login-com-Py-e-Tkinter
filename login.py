@@ -78,11 +78,10 @@ class Application():
 
             confirm_password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, font=("Roboto", 14), show="*").place(x=25, y=225)
             
-            
-            
+
             checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
 
-            # Botões Voltar / Salvar usuário
+            # Botões Voltar - back / Salvar usuário - save_user
 
             def back():
                 # Removendo o frame de Cadastro
