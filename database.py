@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS users (
     email TEXT NOT NULL,
     password TEXT NOT NULL,
     confirmpassword TEXT NOT NULL
-)""")
+);
+""")
 
-print("Conexão ao Banco de Dados feita com Sucesso!")
+print("Conectado ao Banco de Dados!")

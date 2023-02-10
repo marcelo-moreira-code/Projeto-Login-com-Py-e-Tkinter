@@ -79,7 +79,7 @@ class Application():
             confirm_password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, font=("Roboto", 14), show="*").place(x=25, y=225)
             
 
-            checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
+            #checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
 
 
 
@@ -106,7 +106,7 @@ class Application():
                 (username,email,password,confirmpassword)
                 VALUES 
                 (?,?,?,?)
-                """,(Name,Email,Password,Confirmpassword))
+                """,(Name, Email, Password, Confirmpassword))
 
                 database.conexao.commit()
 
@@ -114,7 +114,7 @@ class Application():
                 
 
          
-            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="014B05", command=save_user).place(x=180, y=315)
+            save_button = ctk.CTkButton(master=rg_frame, text="CADASTRAR", width=145, fg_color="green", hover_color="#014B05", command=save_user).place(x=180, y=315)
 
           
 
