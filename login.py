@@ -29,10 +29,8 @@ class Application():
         img = PhotoImage(file="geo2.png")
         label_img = ctk.CTkLabel(master=janela, image=img, text=None).place(x=10, y=75)
 
-        title_label = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", 
-        font=("Roboto", 20), text_color="#00B0F0").place(x=15, y=10)
-        # Substitui text_font por font , pois , estava crashando !
-
+        title_label = ctk.CTkLabel(master=janela, text="Entre na sua conta e tenha\n a plataforma", font=("Roboto", 20), text_color="#00B0F0").place(x=15, y=10)
+        
         # frame
         login_frame = ctk.CTkFrame(master=janela, width=350, height=396)
         login_frame.pack(side=RIGHT)
@@ -40,15 +38,11 @@ class Application():
         #widgets dentro da frame de tela de login
         label = ctk.CTkLabel(master=login_frame, text="Sistema de Login", font=("Roboto", 20)).place(x=25, y=5)
 
-        username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, 
-        font=("Roboto", 14)).place(x=25, y=105)
-        username_label = ctk.CTkLabel(master=login_frame, text="* O campo nome de usuário é de caráter obrigatório.", 
-        text_color="green", font=("Roboto", 8)).place(x=25, y=135)
+        username_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Nome de Usuário", width=300, font=("Roboto", 14)).place(x=25, y=105)
+        username_label = ctk.CTkLabel(master=login_frame, text="* O campo nome de usuário é de caráter obrigatório.", text_color="green", font=("Roboto", 8)).place(x=25, y=135)
 
-        password_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Senha de Usuário", width=300, 
-        font=("Roboto", 14),show="*").place(x=25, y=175)
-        password_label = ctk.CTkLabel(master=login_frame, text="*O campo Senha é de caráter obrigatório.", 
-        text_color="green", font=("Roboto", 8)).place(x=25, y=205)
+        password_entry = ctk.CTkEntry(master=login_frame, placeholder_text="Senha de Usuário", width=300, font=("Roboto", 14),show="*").place(x=25, y=175)
+        password_label = ctk.CTkLabel(master=login_frame, text="*O campo Senha é de caráter obrigatório.", text_color="green", font=("Roboto", 8)).place(x=25, y=205)
 
         #Caixa manter-me conectado
         checkbox = ctk.CTkCheckBox(master=login_frame, text="Manter-me conectado sempre.").place(x=25, y=235)
@@ -63,47 +57,27 @@ class Application():
 
 
         def tela_register():
-            # Remover o frame de login
+            # Remover o frame de Login
             login_frame.pack_forget()
 
-            # Criando a tela de cadastro de usuários
+            # Criando a Tela de Cadastro de Usuários
             rg_frame = ctk.CTkFrame(master=janela, width=350, height=396)
             rg_frame.pack(side=RIGHT)
 
-            ### Registrando ou tt os Dados do usuário no BD
-
-            def registrar_db():
-                username = username_entry.get()
-                email = email_entry.get()
-                password = password_entry.get()
-                confirmpassword = confirm_password_entry.get()
-
-                database.cursor.execute("""
-                INSERT INTO users 
-                (username,email,password,confirmpassword)
-                VALUES
-                (?,?,?,?)
-                """, (username, email, password, confirmpassword))
-                database.conexao.commit()
-                
-                msg = messagebox.showinfo(title="Estado do Registro", message="Dados Cadastrados com Sucesso no Banco de!")
-                pass
+            
             
             label = ctk.CTkLabel(master=rg_frame, text="Faça o seu cadastro", font=("Roboto", 20)).place(x=25, y=5)
-
             span = ctk.CTkLabel(master=rg_frame, text="*Todos os campos são de caráter obrigatório", font=("Roboto",10), text_color="gray").place(x=25, y=65)
 
-            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Nome de Usuário", width=300, 
-            font=("Roboto", 14)).place(x=25, y=105)
 
-            email_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, 
-            font=("Roboto", 14)).place(x=25, y=145)
+            username_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Nome de Usuário", width=300, font=("Roboto", 14)).place(x=25, y=105)
 
-            password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, 
-            font=("Roboto", 14), show="*").place(x=25, y=185)
+            email_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="E-mail de Usuário", width=300, font=("Roboto", 14)).place(x=25, y=145)
 
-            confirm_password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, 
-            font=("Roboto", 14), show="*").place(x=25, y=225)
+            password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Senha de Usuário", width=300, font=("Roboto", 14), show="*").place(x=25, y=185)
+
+            confirm_password_entry = ctk.CTkEntry(master=rg_frame, placeholder_text="Confirmar senha", width=300, font=("Roboto", 14), show="*").place(x=25, y=225)
+            
             
             
             checkbox = ctk.CTkCheckBox(master=rg_frame, text="Aceito todos os Termos e Políticas.").place(x=25, y=265)
@@ -129,8 +103,7 @@ class Application():
 
           
 
-        register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, 
-        fg_color="green", hover_color="#2D9334", command=tela_register).place(x=175, y=325)
+        register_button = ctk.CTkButton(master=login_frame, text="Cadastre-se", width=150, fg_color="green", hover_color="#2D9334", command=tela_register).place(x=175, y=325)
 
 
 
