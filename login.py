@@ -55,7 +55,7 @@ class Application():
 
         register_span = ctk.CTkLabel(master=login_frame, text="Não possue uma conta?").place(x=25, y=325)
 
-
+        
         def tela_register():
             # Remover o frame de Login
             login_frame.pack_forget()
